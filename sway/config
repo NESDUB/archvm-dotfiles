@@ -61,5 +61,12 @@ exec swayidle -w \
   before-sleep 'swaylock -f -c 1a1a1a'
 
 # === Lattice launcher ===
+# Super+Space is avoided because macOS Spotlight intercepts it before QEMU receives it.
+# Primary launcher: Super+Shift+Space
+# Fallback launcher: Super+X
+# Power menu: Super+Shift+P
+# Fallback power: Super+Shift+X
 bindsym $mod+Shift+space exec ~/.config/lattice/scripts/lattice-launcher.sh
+bindsym $mod+x exec ~/.config/lattice/scripts/lattice-launcher.sh
 bindsym $mod+Shift+p exec ~/.config/lattice/scripts/lattice-power.sh
+bindsym $mod+Shift+x exec ~/.config/lattice/scripts/lattice-power.sh
