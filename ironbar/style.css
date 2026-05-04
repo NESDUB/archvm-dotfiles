@@ -93,8 +93,9 @@
     color: @ink;
 }
 
-/* Workspaces — tabular numeric, technical */
+/* Workspaces — system channel strip */
 #lattice-workspaces {
+    min-height: 22px;
     padding: 0 5px;
     border-right: 1px solid @line;
 }
@@ -135,6 +136,13 @@
     background: @ink;
     border-color: @ink;
     color: @bg_solid;
+}
+
+/* Occupied but inactive — safe: if Ironbar doesn't expose this class, selector is a no-op */
+.workspaces button.occupied:not(.focused):not(.visible):not(.active):not(.urgent) {
+    border-color: rgba(11, 11, 10, 0.10);
+    color: @ink_soft;
+    background: rgba(255, 255, 255, 0.16);
 }
 
 /* Focused window capsule */
