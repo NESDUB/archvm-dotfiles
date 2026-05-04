@@ -11,8 +11,9 @@ choice="$(
     '06  System Monitor' \
     '07  Ironbar Config' \
     '08  Sway Config' \
-    '09  Regenerate Theme' \
-  | fuzzel --dmenu --prompt='SETTINGS > ' --width=42 --lines=8
+    '09  Regenerate Theme References' \
+    '10  Apply Theme Live' \
+  | fuzzel --dmenu --prompt='SETTINGS > ' --width=42 --lines=10
 )"
 
 case "$choice" in
@@ -40,8 +41,11 @@ case "$choice" in
   '08  Sway Config')
     foot -e nvim "$HOME/.config/sway/config"
     ;;
-  '09  Regenerate Theme')
+  '09  Regenerate Theme References')
     "$HOME/.config/lattice/scripts/lattice-generate-theme.sh"
     notify-send "LATTICE THEME" "Theme references regenerated from tokens.env."
+    ;;
+  '10  Apply Theme Live')
+    "$HOME/.config/lattice/scripts/lattice-apply-theme.sh"
     ;;
 esac
