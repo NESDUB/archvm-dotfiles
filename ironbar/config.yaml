@@ -47,7 +47,7 @@ center:
     class: "lattice-focus"
     show_icon: true
     show_title: true
-    icon_size: 12
+    icon_size: 16
     truncate:
       mode: end
       length: 54
@@ -67,7 +67,7 @@ end:
   - type: tray
     name: lattice-tray
     class: "lattice-cell lattice-tray"
-    icon_size: 13
+    icon_size: 16
     prefer_theme_icons: true
 
   - type: clock

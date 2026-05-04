@@ -12,7 +12,7 @@
 @define-color line_strong rgba(11, 11, 10, 0.34);
 
 * {
-    font-family: "Inter Variable", system-ui, sans-serif;
+    font-family: "Inter Variable", "Inter", "Symbols Nerd Font", system-ui, sans-serif;
     font-size: 10px;
     font-weight: 700;
     font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1, "cv11" 1;
@@ -27,12 +27,9 @@
     transition: none;
 }
 
-/* Nerd Font glyph stack — only on elements that render icons */
-.icon,
-#lattice-mark,
-#lattice-sys label,
-#lattice-clock {
-    font-family: "Symbols Nerd Font", "Inter Variable", system-ui, sans-serif;
+/* Brand mark is glyph-only — Symbols Nerd Font first */
+#lattice-mark {
+    font-family: "Symbols Nerd Font", "Inter Variable", "Inter", system-ui, sans-serif;
 }
 
 .background {
@@ -157,10 +154,11 @@
 }
 
 #lattice-focused image,
-#lattice-focused .icon {
-    -gtk-icon-size: 12px;
+#lattice-focused .icon,
+#lattice-tray image {
+    -gtk-icon-size: 16px;
     margin-right: 7px;
-    opacity: 0.72;
+    opacity: 0.78;
 }
 
 /* Sys info — softer, compressed */
@@ -170,7 +168,8 @@
 }
 
 #lattice-sys label {
-    min-width: 54px;
+    min-width: 68px;
+    max-width: 68px;
     padding: 0 6px;
     color: @ink_soft;
     font-size: 9px;
@@ -185,14 +184,11 @@
     border-left: 1px solid @line;
 }
 
-#lattice-tray image {
-    -gtk-icon-size: 13px;
-    opacity: 0.80;
-}
 
 /* Clock — Nerd Font glyph prefix + heavy tabular time */
 #lattice-clock {
-    min-width: 80px;
+    min-width: 84px;
+    max-width: 84px;
     padding: 0 11px;
     border-left: 1px solid @line;
     color: @ink;
