@@ -27,10 +27,6 @@
     transition: none;
 }
 
-/* Icon-only brand mark can prefer Symbols Nerd Font. Mixed labels should stay Inter-first. */
-#lattice-mark {
-    font-family: "Symbols Nerd Font", "Inter Variable", "Inter", system-ui, sans-serif;
-}
 
 .background {
     background: transparent;
@@ -74,13 +70,15 @@
     border-right: 1px solid transparent;
 }
 
-/* Brand mark — Nerd Font glyph, regular weight */
+/* Brand mark — geometric Unicode, Inter-rendered */
 #lattice-mark {
     min-width: 38px;
     padding: 0;
     border-right: 1px solid @line;
+    font-family: "Inter Variable", "Inter", system-ui, sans-serif;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 700;
+    letter-spacing: 0;
     color: @ink;
 }
 

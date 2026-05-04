@@ -16,7 +16,7 @@ popup_autohide: true
 start:
   - type: label
     name: lattice-mark
-    class: "lattice-cell lattice-mark icon"
+    class: "lattice-cell lattice-mark"
     label: "▦"
 
   - type: label
