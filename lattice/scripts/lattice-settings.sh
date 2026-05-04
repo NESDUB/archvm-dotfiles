@@ -13,7 +13,10 @@ choice="$(
     '08  Sway Config' \
     '09  Regenerate Theme References' \
     '10  Apply Theme Live' \
-  | fuzzel --dmenu --prompt='SETTINGS > ' --width=42 --lines=10
+    '11  Theme Preview' \
+    '12  Test Accent Token' \
+    '13  Rollback Token Test' \
+  | fuzzel --dmenu --prompt='SETTINGS > ' --width=42 --lines=13
 )"
 
 case "$choice" in
@@ -47,5 +50,14 @@ case "$choice" in
     ;;
   '10  Apply Theme Live')
     "$HOME/.config/lattice/scripts/lattice-apply-theme.sh"
+    ;;
+  '11  Theme Preview')
+    foot -e sh -c "$HOME/.config/lattice/scripts/lattice-theme-preview.sh; echo; read -r -p 'Press Enter to close...'"
+    ;;
+  '12  Test Accent Token')
+    "$HOME/.config/lattice/scripts/lattice-theme-test-accent.sh"
+    ;;
+  '13  Rollback Token Test')
+    "$HOME/.config/lattice/scripts/lattice-theme-rollback-tokens.sh"
     ;;
 esac
