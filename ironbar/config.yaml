@@ -3,13 +3,13 @@ position: bottom
 height: 28
 
 margin:
-  left: 18
-  right: 18
+  left: 10
+  right: 10
   bottom: 10
 
 layer: top
 exclusive_zone: true
-anchor_to_edges: false
+anchor_to_edges: true
 popup_gap: 8
 popup_autohide: true
 

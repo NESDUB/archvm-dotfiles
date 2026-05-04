@@ -14,6 +14,7 @@ exec mako
 exec_always ironbar
 
 output Virtual-1 mode --custom 1440x932@60Hz scale 1 bg /home/alarm/.config/lattice/wallpapers/lattice-substrate.png fill
+output Virtual-1 mode --custom 1440x932@60Hz scale 1 bg /home/alarm/.config/lattice/wallpapers/lattice-substrate.png fill
 
 input * {
     xkb_layout us
