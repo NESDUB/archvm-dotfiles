@@ -59,3 +59,7 @@ exec swayidle -w \
   timeout 900 'swaymsg "output * dpms off"' \
   resume 'swaymsg "output * dpms on"' \
   before-sleep 'swaylock -f -c 1a1a1a'
+
+# === Lattice launcher ===
+bindsym $mod+space exec ~/.config/lattice/scripts/lattice-launcher.sh
+bindsym $mod+Shift+p exec ~/.config/lattice/scripts/lattice-power.sh
