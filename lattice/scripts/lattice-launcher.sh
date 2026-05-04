@@ -26,7 +26,7 @@ case "$choice" in
     firefox
     ;;
   '04  Settings')
-    nwg-look
+    "$HOME/.config/lattice/scripts/lattice-settings.sh"
     ;;
   '05  Screenshot')
     "$HOME/.config/lattice/scripts/lattice-screenshot.sh"

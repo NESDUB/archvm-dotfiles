@@ -72,3 +72,4 @@ bindsym $mod+Shift+space exec ~/.config/lattice/scripts/lattice-launcher.sh
 bindsym $mod+x exec ~/.config/lattice/scripts/lattice-launcher.sh
 bindsym $mod+Shift+p exec ~/.config/lattice/scripts/lattice-power.sh
 bindsym $mod+Shift+x exec ~/.config/lattice/scripts/lattice-power.sh
+bindsym $mod+Shift+comma exec ~/.config/lattice/scripts/lattice-settings.sh
