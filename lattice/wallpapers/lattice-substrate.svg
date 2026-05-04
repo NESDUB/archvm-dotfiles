@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="932" viewBox="0 0 1440 932">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#edede7"/>
+      <stop offset="100%" stop-color="#e6e6df"/>
+    </linearGradient>
+
+    <radialGradient id="bloom" cx="50%" cy="42%" r="42%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.56"/>
+      <stop offset="62%" stop-color="#ffffff" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#0b0b0a" stroke-opacity="0.025" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1440" height="932" fill="url(#bg)"/>
+  <rect width="1440" height="932" fill="url(#bloom)"/>
+  <rect width="1440" height="932" fill="url(#grid)" opacity="0.55"/>
+
+  <!-- faint desktop frame -->
+  <rect x="36" y="30" width="1368" height="844" fill="none" stroke="#0b0b0a" stroke-opacity="0.055" stroke-width="1"/>
+
+  <!-- modular substrate lines -->
+  <line x1="492" y1="30" x2="492" y2="874" stroke="#0b0b0a" stroke-opacity="0.045"/>
+  <line x1="820" y1="30" x2="820" y2="874" stroke="#0b0b0a" stroke-opacity="0.045"/>
+  <line x1="36" y1="492" x2="1404" y2="492" stroke="#0b0b0a" stroke-opacity="0.045"/>
+
+  <!-- lower shell rail guide -->
+  <line x1="36" y1="880" x2="1404" y2="880" stroke="#0b0b0a" stroke-opacity="0.035"/>
+
+  <!-- subtle system rail label line, no text -->
+  <line x1="36" y1="850" x2="70" y2="850" stroke="#0b0b0a" stroke-opacity="0.24"/>
+</svg>

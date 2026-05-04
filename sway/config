@@ -13,8 +13,7 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -b 'Yes' 'swaymsg e
 exec mako
 exec_always ironbar
 
-output Virtual-1 mode --custom 1440x932@60Hz scale 1
-output * bg #edede7 solid_color
+output Virtual-1 mode --custom 1440x932@60Hz scale 1 bg /home/alarm/.config/lattice/wallpapers/lattice-substrate.png fill
 
 input * {
     xkb_layout us
@@ -22,3 +21,41 @@ input * {
 }
 
 exec "if [ -z \$WAYLAND_DISPLAY ] && [ \$XDG_VTNR -eq 1 ]; then exec sway; fi"
+
+# Desktop portal / session environment
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+
+# Auth agent
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Clipboard persistence
+exec wl-paste --watch cliphist store
+bindsym $mod+v exec cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
+
+# Screenshots
+bindsym Print exec grim ~/Pictures/Screenshots/shot-$(date +%Y%m%d-%H%M%S).png
+bindsym Shift+Print exec grim -g "$(slurp)" - | swappy -f -
+
+# File manager
+bindsym $mod+e exec thunar
+
+# Network tray applet
+exec nm-applet --indicator
+
+# Cursor theme
+set $cursor_theme Capitaine Cursors
+set $cursor_size 24
+seat seat0 xcursor_theme "Capitaine Cursors" 24
+exec gsettings set org.gnome.desktop.interface cursor-theme "Capitaine Cursors"
+exec gsettings set org.gnome.desktop.interface cursor-size 24
+
+# Lock screen
+bindsym $mod+l exec swaylock -f -c 1a1a1a
+
+# Idle: lock after 10 min, screen off after 15 min
+exec swayidle -w \
+  timeout 600 'swaylock -f -c 1a1a1a' \
+  timeout 900 'swaymsg "output * dpms off"' \
+  resume 'swaymsg "output * dpms on"' \
+  before-sleep 'swaylock -f -c 1a1a1a'
