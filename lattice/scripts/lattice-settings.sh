@@ -16,7 +16,9 @@ choice="$(
     '11  Theme Preview' \
     '12  Test Accent Token' \
     '13  Rollback Token Test' \
-  | fuzzel --dmenu --prompt='SETTINGS > ' --width=42 --lines=13
+    '14  Theme Diff' \
+    '15  Restore Theme Backup' \
+  | fuzzel --dmenu --prompt='SETTINGS > ' --width=42 --lines=15
 )"
 
 case "$choice" in
@@ -59,5 +61,11 @@ case "$choice" in
     ;;
   '13  Rollback Token Test')
     "$HOME/.config/lattice/scripts/lattice-theme-rollback-tokens.sh"
+    ;;
+  '14  Theme Diff')
+    foot -e "$HOME/.config/lattice/scripts/lattice-theme-diff.sh"
+    ;;
+  '15  Restore Theme Backup')
+    "$HOME/.config/lattice/scripts/lattice-theme-restore-backup.sh"
     ;;
 esac
