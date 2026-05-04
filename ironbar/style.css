@@ -10,6 +10,10 @@
 @define-color icon_active #0b0b0a;
 @define-color line rgba(11, 11, 10, 0.16);
 @define-color line_strong rgba(11, 11, 10, 0.34);
+@define-color accent #50605a;
+@define-color warn #917a3a;
+@define-color error #7a3b36;
+@define-color blue #4c6576;
 
 * {
     font-family: "Inter Variable", "Inter", "Symbols Nerd Font", system-ui, sans-serif;
