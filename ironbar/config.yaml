@@ -16,7 +16,7 @@ popup_autohide: true
 start:
   - type: label
     name: lattice-mark
-    class: "lattice-cell lattice-mark"
+    class: "lattice-cell lattice-mark icon"
     label: "▦"
 
   - type: label
@@ -47,6 +47,7 @@ center:
     class: "lattice-focus"
     show_icon: true
     show_title: true
+    icon_size: 12
     truncate:
       mode: end
       length: 54
@@ -60,8 +61,8 @@ end:
       memory: 12
       system: 30
     format:
-      - "CPU {cpu_percent}%"
-      - "MEM {memory_percent}%"
+      - "󰻠 {cpu_percent}%"
+      - "󰍛 {memory_percent}%"
 
   - type: tray
     name: lattice-tray
@@ -72,5 +73,5 @@ end:
   - type: clock
     name: lattice-clock
     class: "lattice-cell lattice-clock"
-    format: "%H:%M"
+    format: "󰥔 %H:%M"
     format_popup: "%A · %d %B %Y · %H:%M:%S"

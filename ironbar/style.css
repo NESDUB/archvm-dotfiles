@@ -12,9 +12,9 @@
 @define-color line_strong rgba(11, 11, 10, 0.34);
 
 * {
-    font-family: "Inter Variable", "Inter", "Symbols Nerd Font", system-ui, sans-serif;
+    font-family: "Inter Variable", system-ui, sans-serif;
     font-size: 10px;
-    font-weight: 720;
+    font-weight: 700;
     font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1, "cv11" 1;
     color: @ink;
     border: none;
@@ -25,6 +25,14 @@
     padding: 0;
     margin: 0;
     transition: none;
+}
+
+/* Nerd Font glyph stack — only on elements that render icons */
+.icon,
+#lattice-mark,
+#lattice-sys label,
+#lattice-clock {
+    font-family: "Symbols Nerd Font", "Inter Variable", system-ui, sans-serif;
 }
 
 .background {
@@ -64,13 +72,13 @@
     border-right: 1px solid transparent;
 }
 
-/* Brand mark */
+/* Brand mark — Nerd Font glyph, regular weight */
 #lattice-mark {
     min-width: 28px;
     padding: 0 9px;
     border-right: 1px solid @line;
-    font-size: 12px;
-    font-weight: 900;
+    font-size: 13px;
+    font-weight: 400;
     color: @ink;
 }
 
@@ -82,7 +90,6 @@
     font-size: 9px;
     font-weight: 900;
     letter-spacing: 0.16em;
-    font-feature-settings: "tnum" 0;
     color: @ink;
 }
 
@@ -105,7 +112,7 @@
     background: transparent;
     color: @ink_faint;
     font-size: 9px;
-    font-weight: 850;
+    font-weight: 800;
     letter-spacing: 0.12em;
     font-feature-settings: "tnum" 1;
 }
@@ -145,9 +152,8 @@
 #lattice-focused .label {
     color: @ink;
     font-size: 10px;
-    font-weight: 760;
+    font-weight: 700;
     letter-spacing: 0.01em;
-    font-feature-settings: "tnum" 0;
 }
 
 #lattice-focused image,
@@ -168,7 +174,7 @@
     padding: 0 6px;
     color: @ink_soft;
     font-size: 9px;
-    font-weight: 760;
+    font-weight: 700;
     letter-spacing: 0.04em;
     font-feature-settings: "tnum" 1;
 }
@@ -184,9 +190,9 @@
     opacity: 0.80;
 }
 
-/* Clock — heavy, wide tracking, tabular */
+/* Clock — Nerd Font glyph prefix + heavy tabular time */
 #lattice-clock {
-    min-width: 62px;
+    min-width: 80px;
     padding: 0 11px;
     border-left: 1px solid @line;
     color: @ink;
@@ -222,7 +228,7 @@ button:hover {
 .popup-clock .calendar-clock {
     color: @ink;
     font-size: 12px;
-    font-weight: 850;
+    font-weight: 900;
 }
 
 tooltip {

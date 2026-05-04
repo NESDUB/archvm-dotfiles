@@ -13,8 +13,8 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -b 'Yes' 'swaymsg e
 exec mako
 exec_always ironbar
 
-output Virtual-1 mode 1440x900 scale 1
-output * bg #1a1a1a solid_color
+output Virtual-1 mode --custom 1440x932@60Hz scale 1
+output * bg #edede7 solid_color
 
 input * {
     xkb_layout us
