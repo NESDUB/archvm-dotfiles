@@ -61,8 +61,8 @@ end:
       memory: 12
       system: 30
     format:
-      - "󰻠 {cpu_percent}%"
-      - "󰍛 {memory_percent}%"
+      - "CPU {cpu_percent}%"
+      - "MEM {memory_percent}%"
 
   - type: tray
     name: lattice-tray

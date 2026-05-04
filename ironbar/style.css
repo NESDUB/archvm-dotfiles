@@ -173,21 +173,23 @@
     opacity: 0.82;
 }
 
-/* Sys info — softer, compressed */
+/* Telemetry — fixed-width system readouts */
 #lattice-sys {
+    min-height: 22px;
     padding: 0 5px;
     border-left: 1px solid @line;
 }
 
 #lattice-sys label {
-    min-width: 68px;
-    max-width: 68px;
+    min-width: 70px;
+    max-width: 70px;
     padding: 0 6px;
     color: @ink_soft;
+    font-family: "Inter Variable", "Inter", "Symbols Nerd Font", system-ui, sans-serif;
     font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    font-feature-settings: "tnum" 1;
+    font-weight: 720;
+    letter-spacing: 0.045em;
+    font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1, "cv11" 1;
 }
 
 /* Tray */
