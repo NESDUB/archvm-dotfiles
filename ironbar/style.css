@@ -1,0 +1,214 @@
+@define-color bg rgba(243, 243, 239, 0.88);
+@define-color bg_solid #f3f3ef;
+@define-color cell rgba(255, 255, 255, 0.34);
+@define-color cell_hot #e7e7df;
+@define-color active #dcdcd1;
+@define-color ink #0b0b0a;
+@define-color ink_soft #565650;
+@define-color ink_faint #8b8b82;
+@define-color line rgba(11, 11, 10, 0.16);
+@define-color line_strong rgba(11, 11, 10, 0.34);
+
+* {
+    font-family: "Inter", "SF Pro Display", system-ui, sans-serif;
+    font-size: 10px;
+    font-weight: 720;
+    color: @ink;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    transition: none;
+}
+
+.background {
+    background: transparent;
+}
+
+#bar {
+    min-height: 28px;
+    padding: 0 5px;
+    background: @bg;
+    border: 1px solid @line;
+}
+
+#start,
+#center,
+#end {
+    min-height: 28px;
+    padding: 0;
+    margin: 0;
+}
+
+.widget-container {
+    margin: 0;
+    padding: 0;
+}
+
+.widget {
+    min-height: 22px;
+}
+
+.lattice-cell {
+    min-height: 22px;
+    margin: 2px 1px;
+    padding: 0 8px;
+    background: transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+#lattice-mark {
+    min-width: 28px;
+    padding: 0 9px;
+    border-right: 1px solid @line;
+    font-size: 12px;
+    font-weight: 900;
+    color: @ink;
+}
+
+#lattice-title {
+    min-width: 92px;
+    padding: 0 12px;
+    border-right: 1px solid @line;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    color: @ink;
+}
+
+#lattice-workspaces {
+    padding: 0 4px;
+    border-right: 1px solid @line;
+}
+
+.workspaces {
+    padding: 0;
+}
+
+.workspaces button {
+    min-width: 26px;
+    min-height: 18px;
+    margin: 0 1px;
+    padding: 0 6px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: @ink_faint;
+    font-size: 9px;
+    font-weight: 820;
+    letter-spacing: 0.08em;
+}
+
+.workspaces button:hover {
+    background: @cell;
+    border-color: @line;
+    color: @ink_soft;
+}
+
+.workspaces button.focused,
+.workspaces button.visible,
+.workspaces button.active {
+    background: @active;
+    border-color: @line_strong;
+    color: @ink;
+}
+
+.workspaces button.urgent {
+    background: @ink;
+    border-color: @ink;
+    color: @bg_solid;
+}
+
+#lattice-focused {
+    min-width: 330px;
+    min-height: 22px;
+    margin: 2px 0;
+    padding: 0 16px;
+    background: @cell;
+    border-left: 1px solid @line;
+    border-right: 1px solid @line;
+}
+
+#lattice-focused label,
+#lattice-focused .label {
+    color: @ink;
+    font-size: 10px;
+    font-weight: 760;
+    letter-spacing: 0.01em;
+}
+
+#lattice-sys {
+    padding: 0 5px;
+    border-left: 1px solid @line;
+}
+
+#lattice-sys label {
+    min-width: 54px;
+    padding: 0 6px;
+    color: @ink_soft;
+    font-size: 9px;
+    font-weight: 760;
+    letter-spacing: 0.06em;
+}
+
+#lattice-tray {
+    padding: 0 6px;
+    border-left: 1px solid @line;
+}
+
+#lattice-tray image {
+    -gtk-icon-size: 13px;
+}
+
+#lattice-clock {
+    min-width: 62px;
+    padding: 0 11px;
+    border-left: 1px solid @line;
+    color: @ink;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.10em;
+}
+
+button {
+    border-radius: 0;
+    background: transparent;
+}
+
+button:hover {
+    background: @cell_hot;
+}
+
+.popup {
+    padding: 8px;
+    background: @bg_solid;
+    border: 1px solid @line_strong;
+    border-radius: 0;
+}
+
+.popup-clock {
+    padding: 10px;
+    background: @bg_solid;
+    border: 1px solid @line_strong;
+}
+
+.popup-clock .calendar-clock {
+    color: @ink;
+    font-size: 12px;
+    font-weight: 850;
+}
+
+tooltip {
+    background: @bg_solid;
+    border: 1px solid @line;
+    border-radius: 0;
+}
+
+tooltip label {
+    color: @ink_soft;
+    font-size: 10px;
+    font-weight: 700;
+}

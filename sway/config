@@ -1,0 +1,24 @@
+# === Sway config ===
+
+include /etc/sway/config.d/*
+
+set $mod Mod4
+
+bindsym $mod+Return exec foot
+bindsym $mod+d exec fuzzel
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -b 'Yes' 'swaymsg exit'
+
+exec mako
+exec_always ironbar
+
+output Virtual-1 mode 1440x900 scale 1
+output * bg #1a1a1a solid_color
+
+input * {
+    xkb_layout us
+    xkb_options caps:escape
+}
+
+exec "if [ -z \$WAYLAND_DISPLAY ] && [ \$XDG_VTNR -eq 1 ]; then exec sway; fi"

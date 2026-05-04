@@ -1,0 +1,76 @@
+name: lattice-bottom
+position: bottom
+height: 28
+
+margin:
+  left: 18
+  right: 18
+  bottom: 10
+
+layer: top
+exclusive_zone: true
+anchor_to_edges: false
+popup_gap: 8
+popup_autohide: true
+
+start:
+  - type: label
+    name: lattice-mark
+    class: "lattice-cell lattice-mark"
+    label: "▦"
+
+  - type: label
+    name: lattice-title
+    class: "lattice-cell lattice-title"
+    label: "LATTICE OS"
+
+  - type: workspaces
+    name: lattice-workspaces
+    class: "lattice-cell workspace-bank"
+    all_monitors: false
+    favorites:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+      - "5"
+    name_map:
+      "1": "01"
+      "2": "02"
+      "3": "03"
+      "4": "04"
+      "5": "05"
+
+center:
+  - type: focused
+    name: lattice-focused
+    class: "lattice-focus"
+    show_icon: false
+    show_title: true
+    truncate:
+      mode: end
+      length: 54
+
+end:
+  - type: sys_info
+    name: lattice-sys
+    class: "lattice-cell lattice-sys"
+    interval:
+      cpu: 4
+      memory: 12
+      system: 30
+    format:
+      - "CPU {cpu_percent}%"
+      - "MEM {memory_percent}%"
+
+  - type: tray
+    name: lattice-tray
+    class: "lattice-cell lattice-tray"
+    icon_size: 13
+    prefer_theme_icons: true
+
+  - type: clock
+    name: lattice-clock
+    class: "lattice-cell lattice-clock"
+    format: "%H:%M"
+    format_popup: "%A · %d %B %Y · %H:%M:%S"
