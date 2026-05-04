@@ -45,7 +45,7 @@ center:
   - type: focused
     name: lattice-focused
     class: "lattice-focus"
-    show_icon: false
+    show_icon: true
     show_title: true
     truncate:
       mode: end
