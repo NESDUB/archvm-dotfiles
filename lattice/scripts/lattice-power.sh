@@ -8,7 +8,7 @@ choice="$(
     'EXIT SWAY' \
     'REBOOT' \
     'SHUTDOWN' \
-  | fuzzel --dmenu --prompt='POWER > '
+  | fuzzel --dmenu --prompt='POWER > ' --width=32 --lines=5
 )"
 
 case "$choice" in

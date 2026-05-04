@@ -12,7 +12,7 @@ choice="$(
     '07  Reload Sway' \
     '08  Restart Ironbar' \
     '09  Power Menu' \
-  | fuzzel --dmenu --prompt='LATTICE > '
+  | fuzzel --dmenu --prompt='LATTICE > ' --width=42 --lines=9
 )"
 
 case "$choice" in
@@ -33,7 +33,7 @@ case "$choice" in
     grim -g "$(slurp)" "$HOME/Pictures/Screenshots/shot-$(date +%Y%m%d-%H%M%S).png"
     ;;
   '06  Clipboard')
-    cliphist list | fuzzel --dmenu --prompt='CLIP > ' | cliphist decode | wl-copy
+    cliphist list | fuzzel --dmenu --prompt='CLIP > ' --width=48 --lines=10 | cliphist decode | wl-copy
     ;;
   '07  Reload Sway')
     swaymsg reload
