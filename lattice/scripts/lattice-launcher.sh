@@ -7,7 +7,7 @@ choice="$(
     '02  Files' \
     '03  Browser' \
     '04  Settings' \
-    '05  Screenshot Area' \
+    '05  Screenshot' \
     '06  Clipboard' \
     '07  Reload Sway' \
     '08  Restart Ironbar' \
@@ -28,12 +28,11 @@ case "$choice" in
   '04  Settings')
     nwg-look
     ;;
-  '05  Screenshot Area')
-    mkdir -p "$HOME/Pictures/Screenshots"
-    grim -g "$(slurp)" "$HOME/Pictures/Screenshots/shot-$(date +%Y%m%d-%H%M%S).png"
+  '05  Screenshot')
+    "$HOME/.config/lattice/scripts/lattice-screenshot.sh"
     ;;
   '06  Clipboard')
-    cliphist list | fuzzel --dmenu --prompt='CLIP > ' --width=48 --lines=10 | cliphist decode | wl-copy
+    "$HOME/.config/lattice/scripts/lattice-clipboard.sh"
     ;;
   '07  Reload Sway')
     swaymsg reload

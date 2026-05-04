@@ -31,7 +31,9 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # Clipboard persistence
 exec wl-paste --watch cliphist store
-bindsym $mod+v exec cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
+# === Lattice workflows ===
+bindsym $mod+Shift+s exec ~/.config/lattice/scripts/lattice-screenshot.sh
+bindsym $mod+v exec ~/.config/lattice/scripts/lattice-clipboard.sh
 
 # Screenshots
 bindsym Print exec grim ~/Pictures/Screenshots/shot-$(date +%Y%m%d-%H%M%S).png
