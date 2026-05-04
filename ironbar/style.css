@@ -192,8 +192,9 @@
     font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1, "cv11" 1;
 }
 
-/* Tray */
+/* Tray — system-owned icons, visually quiet */
 #lattice-tray {
+    min-height: 22px;
     padding: 0 10px;
     border-left: 1px solid @line;
 }
@@ -203,17 +204,18 @@
     opacity: 0.78;
 }
 
-/* Clock — dot prefix + heavy tabular time */
+/* Clock — temporal state cell */
 #lattice-clock {
     min-width: 84px;
     max-width: 84px;
     padding: 0 11px;
     border-left: 1px solid @line;
     color: @ink;
+    font-family: "Inter Variable", "Inter", "Symbols Nerd Font", system-ui, sans-serif;
     font-size: 10px;
     font-weight: 900;
     letter-spacing: 0.10em;
-    font-feature-settings: "tnum" 1;
+    font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1, "cv11" 1;
 }
 
 button {
