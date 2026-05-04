@@ -13,8 +13,8 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'Exit sway?' -b 'Yes' 'swaymsg e
 exec mako
 exec_always ironbar
 
-output Virtual-1 mode --custom 1440x932@60Hz scale 1 bg /home/alarm/.config/lattice/wallpapers/lattice-substrate.png fill
-output Virtual-1 mode --custom 1440x932@60Hz scale 1 bg /home/alarm/.config/lattice/wallpapers/lattice-substrate.png fill
+output Virtual-1 mode --custom 2880x1864@60Hz scale 2.5 bg /home/alarm/.config/lattice/wallpapers/lattice-substrate.png fill
+output Virtual-1 scale_filter linear
 
 input * {
     xkb_layout us
