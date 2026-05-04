@@ -9,16 +9,17 @@ choice="$(
     '04  Bluetooth' \
     '05  File Manager' \
     '06  System Monitor' \
-    '07  Ironbar Config' \
-    '08  Sway Config' \
-    '09  Regenerate Theme References' \
-    '10  Apply Theme Live' \
-    '11  Theme Preview' \
-    '12  Test Accent Token' \
-    '13  Rollback Token Test' \
-    '14  Theme Diff' \
-    '15  Restore Theme Backup' \
-  | fuzzel --dmenu --prompt='SETTINGS > ' --width=42 --lines=15
+    '07  Lattice Status' \
+    '08  Ironbar Config' \
+    '09  Sway Config' \
+    '10  Regenerate Theme References' \
+    '11  Apply Theme Live' \
+    '12  Theme Preview' \
+    '13  Test Accent Token' \
+    '14  Rollback Token Test' \
+    '15  Theme Diff' \
+    '16  Restore Theme Backup' \
+  | fuzzel --dmenu --prompt='SETTINGS > ' --width=42 --lines=16
 )"
 
 case "$choice" in
@@ -40,32 +41,35 @@ case "$choice" in
   '06  System Monitor')
     foot -e sh -c 'btop || htop || top'
     ;;
-  '07  Ironbar Config')
+  '07  Lattice Status')
+    "$HOME/.config/lattice/scripts/lattice-status-view.sh"
+    ;;
+  '08  Ironbar Config')
     foot -e nvim "$HOME/.config/ironbar/style.css"
     ;;
-  '08  Sway Config')
+  '09  Sway Config')
     foot -e nvim "$HOME/.config/sway/config"
     ;;
-  '09  Regenerate Theme References')
+  '10  Regenerate Theme References')
     "$HOME/.config/lattice/scripts/lattice-generate-theme.sh"
     notify-send "LATTICE THEME" "Theme references regenerated from tokens.env."
     ;;
-  '10  Apply Theme Live')
+  '11  Apply Theme Live')
     "$HOME/.config/lattice/scripts/lattice-apply-theme.sh"
     ;;
-  '11  Theme Preview')
+  '12  Theme Preview')
     foot -e sh -c "$HOME/.config/lattice/scripts/lattice-theme-preview.sh; echo; read -r -p 'Press Enter to close...'"
     ;;
-  '12  Test Accent Token')
+  '13  Test Accent Token')
     "$HOME/.config/lattice/scripts/lattice-theme-test-accent.sh"
     ;;
-  '13  Rollback Token Test')
+  '14  Rollback Token Test')
     "$HOME/.config/lattice/scripts/lattice-theme-rollback-tokens.sh"
     ;;
-  '14  Theme Diff')
+  '15  Theme Diff')
     foot -e "$HOME/.config/lattice/scripts/lattice-theme-diff.sh"
     ;;
-  '15  Restore Theme Backup')
+  '16  Restore Theme Backup')
     "$HOME/.config/lattice/scripts/lattice-theme-restore-backup.sh"
     ;;
 esac
