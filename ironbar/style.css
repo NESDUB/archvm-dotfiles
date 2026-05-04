@@ -227,34 +227,81 @@ button:hover {
     background: @cell_hot;
 }
 
+/* Popups — square GTK overlays aligned to Lattice shell */
 .popup {
     padding: 8px;
     background: @bg_solid;
     border: 1px solid @line_strong;
     border-radius: 0;
+    box-shadow: none;
 }
 
 .popup-clock {
     padding: 10px;
     background: @bg_solid;
     border: 1px solid @line_strong;
-    font-feature-settings: "tnum" 1;
+    border-radius: 0;
+    box-shadow: none;
+    font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1, "cv11" 1;
 }
 
 .popup-clock .calendar-clock {
     color: @ink;
+    font-family: "Inter Variable", "Inter", "Symbols Nerd Font", system-ui, sans-serif;
     font-size: 12px;
     font-weight: 900;
+    letter-spacing: 0.04em;
+}
+
+.popup-clock .calendar {
+    background: transparent;
+    color: @ink_soft;
+    border: none;
+}
+
+.popup-clock .calendar:selected {
+    background: @active;
+    color: @ink;
+    border-radius: 0;
 }
 
 tooltip {
     background: @bg_solid;
     border: 1px solid @line;
     border-radius: 0;
+    box-shadow: none;
 }
 
 tooltip label {
     color: @ink_soft;
+    font-family: "Inter Variable", "Inter", "Symbols Nerd Font", system-ui, sans-serif;
     font-size: 10px;
     font-weight: 700;
+}
+
+/* Tray/menu safety styling */
+menu,
+popover,
+popover contents {
+    background: @bg_solid;
+    border: 1px solid @line;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+menuitem,
+modelbutton {
+    min-height: 24px;
+    padding: 0 10px;
+    color: @ink;
+    font-family: "Inter Variable", "Inter", "Symbols Nerd Font", system-ui, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 0;
+}
+
+menuitem:hover,
+modelbutton:hover {
+    background: @cell_hot;
+    color: @ink;
 }
