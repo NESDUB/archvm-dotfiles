@@ -41,6 +41,7 @@
     padding: 0 5px;
     background: @bg;
     border: 1px solid @line;
+    border-radius: 0;
 }
 
 #start,
@@ -49,6 +50,10 @@
     min-height: 28px;
     padding: 0;
     margin: 0;
+}
+
+#center {
+    padding: 0 10px;
 }
 
 .widget-container {
@@ -62,7 +67,7 @@
 
 .lattice-cell {
     min-height: 22px;
-    margin: 2px 1px;
+    margin: 2px 0;
     padding: 0 8px;
     background: transparent;
     border-left: 1px solid transparent;
@@ -71,8 +76,8 @@
 
 /* Brand mark — Nerd Font glyph, regular weight */
 #lattice-mark {
-    min-width: 28px;
-    padding: 0 9px;
+    min-width: 38px;
+    padding: 0;
     border-right: 1px solid @line;
     font-size: 13px;
     font-weight: 400;
@@ -81,7 +86,7 @@
 
 /* Brand name — heavy, wide tracking */
 #lattice-title {
-    min-width: 92px;
+    min-width: 128px;
     padding: 0 12px;
     border-right: 1px solid @line;
     font-size: 9px;
@@ -92,7 +97,7 @@
 
 /* Workspaces — tabular numeric, technical */
 #lattice-workspaces {
-    padding: 0 4px;
+    padding: 0 5px;
     border-right: 1px solid @line;
 }
 
@@ -101,7 +106,7 @@
 }
 
 .workspaces button {
-    min-width: 26px;
+    min-width: 28px;
     min-height: 18px;
     margin: 0 1px;
     padding: 0 6px;
@@ -109,7 +114,7 @@
     background: transparent;
     color: @ink_faint;
     font-size: 9px;
-    font-weight: 800;
+    font-weight: 850;
     letter-spacing: 0.12em;
     font-feature-settings: "tnum" 1;
 }
@@ -134,9 +139,9 @@
     color: @bg_solid;
 }
 
-/* Focused window — medium-heavy, less tracking */
+/* Focused window capsule */
 #lattice-focused {
-    min-width: 330px;
+    min-width: 420px;
     min-height: 22px;
     margin: 2px 0;
     padding: 0 14px;
@@ -149,20 +154,15 @@
 #lattice-focused .label {
     color: @ink;
     font-size: 10px;
-    font-weight: 700;
+    font-weight: 720;
     letter-spacing: 0.01em;
 }
 
 #lattice-focused image,
-#lattice-focused .icon,
-#lattice-tray image {
-    -gtk-icon-size: 16px;
-    opacity: 0.78;
-}
-
-#lattice-focused image,
 #lattice-focused .icon {
+    -gtk-icon-size: 16px;
     margin-right: 7px;
+    opacity: 0.78;
 }
 
 /* Sys info — softer, compressed */
@@ -184,12 +184,16 @@
 
 /* Tray */
 #lattice-tray {
-    padding: 0 6px;
+    padding: 0 10px;
     border-left: 1px solid @line;
 }
 
+#lattice-tray image {
+    -gtk-icon-size: 16px;
+    opacity: 0.78;
+}
 
-/* Clock — Nerd Font glyph prefix + heavy tabular time */
+/* Clock — dot prefix + heavy tabular time */
 #lattice-clock {
     min-width: 84px;
     max-width: 84px;
