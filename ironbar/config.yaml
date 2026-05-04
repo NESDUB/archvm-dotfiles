@@ -50,7 +50,7 @@ center:
     icon_size: 16
     truncate:
       mode: end
-      length: 54
+      length: 64
 
 end:
   - type: sys_info

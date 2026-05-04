@@ -145,30 +145,32 @@
     background: rgba(255, 255, 255, 0.16);
 }
 
-/* Focused window capsule */
+/* Focused window — active task capsule */
 #lattice-focused {
-    min-width: 420px;
+    min-width: 470px;
     min-height: 22px;
     margin: 2px 0;
-    padding: 0 14px;
+    padding: 0 0 0 10px;
     background: @cell;
     border-left: 1px solid @line;
     border-right: 1px solid @line;
+    box-shadow: inset -1px 0 0 @line;
 }
 
 #lattice-focused label,
 #lattice-focused .label {
     color: @ink;
     font-size: 10px;
-    font-weight: 720;
+    font-weight: 730;
     letter-spacing: 0.01em;
+    font-feature-settings: "tnum" 1, "cv02" 1, "cv03" 1, "cv04" 1, "cv11" 1;
 }
 
 #lattice-focused image,
 #lattice-focused .icon {
     -gtk-icon-size: 16px;
-    margin-right: 7px;
-    opacity: 0.78;
+    margin-right: 8px;
+    opacity: 0.82;
 }
 
 /* Sys info — softer, compressed */
